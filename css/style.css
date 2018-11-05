@@ -1,0 +1,41 @@
+.class {}
+#id {}
+p {/*elemento (por cierto esto es un comentario) */}
+div, p { /* Selecciona todos los div y todos los p */ }
+div p { /* Selecciona todos los p que están anidados dentro de un div */ }
+div > p	{ /* Selecciona todos los párrafos cuyo padre es un div*/ }
+div + p	{ /* Selecciona todos los párrafos que están inmediatamente a continuación de un div */ }
+p ~ ul	{ /* Selecciona todos los ul que están inmediatamente precedidos por un p*/ }
+[required]	{ /* Seleeciona todos los elementos con con el atributo required */ } Selects all elements with a target attribute
+[target="_blank"] { /* Selecciona todos los elementos con target="_blank"*/ }
+
+/* PSEUDO-SELECTORES */
+a:active { /* Selecciona el link activo */ }
+a:visited { /* Selecciona el link visitado */ }
+a:hover	{ /* Selecciona el link cuando el mouse está posicionado arriba */ }
+
+input:checked { /* Selecciona todos los inputs chequeados */ }
+input:disabled	{ /* Selecciona todos los inputs deshabilitados */ }
+input:required	{ /* Selecciona todos los inputs que tienen el atributo required*/ }
+p:empty	{ /* Selecciona todos los párrafos vacíos */ }
+
+p:first-child { /* Selecciona todos los párrafos que son el primer elemento dentro de sus padres */ }
+p:nth-child(2)	{ /* Igual que el anterior pero puedo determinar el número de hijo*/ } 
+
+/* PSEUDO-CLASES */
+p::after {}	
+p::before {}
+/* Insertan un elemento después y antes de p respectivamente */
+::selection { /* Selecciona la parte del sitio que está seleccionando el usuario */ }
+
+
+
+
+
+		div p { color: green; }
+		.intro { color: red; }
+		p.intro { color: orange; }
+		div p.intro { color: grey }
+		.seccion-principal .intro { color: blue; }
+		div.seccion-principal p.intro { color: yellow }
+		#parrafo-destacado { color: pink; }
